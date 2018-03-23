@@ -42,15 +42,22 @@ if __name__ == "__main__":
                 maxClassId = i
                 maxClassPoint = classPoint
 
+        className = classNames[maxClassId]
         print("class id: ", maxClassId)
         print("class point: ", maxClassPoint)
-        print("name: ", classNames[maxClassId])
+        print("name: ", className)
         prevFrameTime = currentFrameTime
         currentFrameTime = time.time()
         if (prevFrameTime != None):
             print(1.0 / (currentFrameTime - prevFrameTime), "fps")
 
         if (showPreview):
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            size = 1
+            color = (255,255,255)
+            weight = 2
+            cv2.putText(frame, className, (10, 30), font, size, color, weight)
+            cv2.putText(frame, str(maxClassPoint), (10, 60), font, size, color, weight)
             cv2.imshow("detections", frame)
 
         if cv2.waitKey(1) >= 0:
