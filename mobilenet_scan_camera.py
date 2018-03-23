@@ -2,12 +2,15 @@ import argparse
 import cv2
 from cv2 import dnn
 import numpy as np
+import time
 
 inWidth = 224
 inHeight = 224
 WHRatio = inWidth / float(inHeight)
 inScaleFactor = 0.017
 meanVal = (103.94, 116.78, 123.68)
+prevFrameTime = None
+currentFrameTime = None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -42,6 +45,10 @@ if __name__ == "__main__":
         print("class id: ", maxClassId)
         print("class point: ", maxClassPoint)
         print("name: ", classNames[maxClassId])
+        prevFrameTime = currentFrameTime
+        currentFrameTime = time.time()
+        if (prevFrameTime != None):
+            print(1.0 / (currentFrameTime - prevFrameTime), "fps")
 
         if (showPreview):
             cv2.imshow("detections", frame)
