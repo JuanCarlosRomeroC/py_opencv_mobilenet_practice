@@ -23,7 +23,8 @@ if __name__ == "__main__":
 
     while True:
         ret, frame = cap.read()
-        blob = dnn.blobFromImage(frame, inScaleFactor, (inWidth, inHeight), meanVal)
+        rgbFrame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        blob = dnn.blobFromImage(rgbFrame, inScaleFactor, (inWidth, inHeight), meanVal)
         net.setInput(blob)
         detections = net.forward()
 
