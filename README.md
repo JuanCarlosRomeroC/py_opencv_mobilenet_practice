@@ -1,12 +1,17 @@
 # py_opencv_mobilenet_practice
 
-# Setup
+# Setup OpenCV3.3 or later
+
+## Ubuntu
+```
+sudo apt install python3-opencv
+```
+
+## Raspbian
 ```
 sudo apt install pip3
 sudo pip3 install opencv_contrib_python
 ```
-
-Tested with using OpenCV 3.3.
 
 # Usage
 ```
