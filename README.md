@@ -13,6 +13,11 @@ Tested with using OpenCV 3.3.
 python3 mobilenet_scan_camera.py
 ```
 
+If you don't need preview window.
+```
+python3 mobilenet_scan_camera.py --showpreview=false
+```
+
 # References
 - [shicai/MobileNet-Caffe](https://github.com/shicai/MobileNet-Caffe)
 - [【Windows】【Python】OpenCV3.3.1のdnnモジュールサンプル(mobilenet_ssd_python.py)](https://qiita.com/Kazuhito/items/e2b57db762b183238b13)

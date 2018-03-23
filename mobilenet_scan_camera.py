@@ -15,11 +15,14 @@ if __name__ == "__main__":
     parser.add_argument("--prototxt", default="mobilenet_v2_deploy.prototxt")
     parser.add_argument("--caffemodel", default="mobilenet_v2.caffemodel")
     parser.add_argument("--classNames", default="synset.txt")
+    parser.add_argument("--showpreview", default=True)
+
     args = parser.parse_args()
     net = dnn.readNetFromCaffe(args.prototxt, args.caffemodel)
     cap = cv2.VideoCapture(args.video)
     f = open(args.classNames, 'r')
     classNames = f.readlines()
+    showPreview = (args.showpreview == True or args.showpreview == "True" or args.showpreview == "true")
 
     while True:
         ret, frame = cap.read()
@@ -40,6 +43,8 @@ if __name__ == "__main__":
         print("class point: ", maxClassPoint)
         print("name: ", classNames[maxClassId])
 
-        cv2.imshow("detections", frame)
+        if (showPreview):
+            cv2.imshow("detections", frame)
+
         if cv2.waitKey(1) >= 0:
             break
