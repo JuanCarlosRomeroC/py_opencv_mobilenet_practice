@@ -20,7 +20,7 @@ python3 mobilenet_scan_camera.py
 
 If you don't need preview window.
 ```
-python3 mobilenet_scan_camera.py --showpreview=false
+python3 mobilenet_scan_camera.py --preview=false
 ```
 
 # References
