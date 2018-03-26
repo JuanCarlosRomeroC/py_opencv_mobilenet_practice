@@ -24,6 +24,7 @@ python3 mobilenet_scan_camera.py --preview=false
 ```
 
 # References
+- [OpenCVのDNNモジュールをPythonで呼び出し、MobileNetを利用した物体認識をしてみた](http://asukiaaa.blogspot.com/2018/03/opencvdnnpythonmobilenet.html)
 - [shicai/MobileNet-Caffe](https://github.com/shicai/MobileNet-Caffe)
 - [【Windows】【Python】OpenCV3.3.1のdnnモジュールサンプル(mobilenet_ssd_python.py)](https://qiita.com/Kazuhito/items/e2b57db762b183238b13)
 - [opencv/samples/dnn/mobilenet_ssd_accuracy.py](https://github.com/opencv/opencv/blob/master/samples/dnn/mobilenet_ssd_accuracy.py)
