@@ -9,8 +9,8 @@ sudo apt install python3-opencv
 
 ## Raspbian
 ```
-sudo apt install pip3
-sudo pip3 install opencv_contrib_python
+sudo apt install python3-pip libcblas-dev libatlas3-base libilmbase12 libopenexr22 libgstreamer1.0-0 libqtgui4 libqttest4-perl
+sudo pip3 install opencv-python
 ```
 
 # Usage
