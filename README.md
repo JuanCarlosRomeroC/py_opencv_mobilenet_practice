@@ -1,5 +1,7 @@
 # py_opencv_mobilenet_practice
 
+A project to practice using mobilenet.
+
 # Setup OpenCV3.3 or later
 
 ## Ubuntu
